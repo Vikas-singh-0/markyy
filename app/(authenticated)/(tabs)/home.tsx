@@ -10,9 +10,14 @@ import React from "react";
 import { useAuth } from "@clerk/clerk-expo";
 import { Link, Stack } from "expo-router";
 import Colors from "@/constants/Colors";
+import RoundButton from "@/components/RoundButton";
+import DropDown from "@/components/DropDown";
 
 const home = () => {
   const balance = 123;
+  const onAddMoney = () => {
+
+  }
   return (
     <ScrollView style={{ backgroundColor: Colors.background }}>
       <View style={styles.account}>
@@ -22,10 +27,10 @@ const home = () => {
         </View>
       </View>
       <View style={styles.actionRow}>
-        <Button title="Send"></Button>
-        <Button title="Request"></Button>
-        <Button title="Send"></Button>
-        <Button title="Send"></Button>
+        <RoundButton text={'Add money'} onPress={onAddMoney} icon={'add'} ></RoundButton>
+        <RoundButton text={'Exchange Money'} icon={'refresh'} ></RoundButton>
+        <RoundButton text={'Details'} icon={'list'} ></RoundButton>
+        <DropDown/>
       </View>
     </ScrollView>
   );
