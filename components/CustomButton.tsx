@@ -2,7 +2,7 @@ import { View, Text, Pressable, StyleSheet, Alert } from "react-native";
 import React from "react";
 import { Link } from "expo-router";
 
-const CustomButton = ({ text }) => {
+const CustomButton = ({  }) => {
   return (
     <View>
       {/* <Pressable style={styles.loginBtn}> */}
